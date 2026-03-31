@@ -1,0 +1,6 @@
+.intro {
+    display: flex;
+    justify-content: center;    /* center in window's height */
+    align-items: center;        /* center in window's width */
+    
+}   

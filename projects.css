@@ -1,0 +1,23 @@
+html, body {
+    margin: 0;
+}
+
+#projects {
+    background: rgb(16, 24, 39);
+    align-items: center;        /* center in window's width */
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: white;
+    margin-top: 7rem;
+}
+
+h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-top: -1rem;
+    color: white;
+}

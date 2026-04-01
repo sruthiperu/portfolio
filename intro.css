@@ -1,6 +1,129 @@
 .intro {
     display: flex;
     justify-content: center;    /* center in window's height */
-    align-items: center;        /* center in window's width */
-    
+    align-items: flex-start;        /* center in window's width */
+    background-color: black;
+    min-height: 100vh;          /* take full screen height */
+    padding-top: 4.5%;
+    padding-left: 20%;
+    padding-right: 20%;         
+    gap: 1.5rem; 
 }   
+
+.intro_text {
+    flex: 2;
+    text-align: left;
+    /* add animation */
+}
+
+.intro_text h1 {
+    font-size: 2.2rem;
+    color: white;
+    padding-top: 22%;
+    font-weight: 650;
+}
+.intro_text h2 {
+    font-size: 1.4rem;
+    color: rgb(215, 212, 212);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+.intro_text h3 {
+    font-size: 1.1rem;
+    color: rgb(185, 185, 185);
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+.intro_text h3 mark {
+    background-color: transparent;
+    color: rgb(251, 245, 187);
+    line-height: 1.4;
+}
+.intro_text h4 {
+    font-size: 1.1rem;
+    color: rgb(185, 185, 185);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+.intro_text h5 {
+    font-size: 1.1rem;
+    color: rgb(185, 185, 185);
+    margin-top: 1rem;
+    margin-bottom: 1.1rem;
+    font-weight: 500;
+}
+.intro_text h5 i {      /* muscle icon in h4 */
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+.intro_text h5 .fa-bolt {
+    color: rgb(251, 245, 187);    
+}
+.intro_text h5 .fa-bolt:hover {
+    /* color: gold;  */
+    animation: shake 0.6s ease-in-out;      /* shake bolt when hovering */
+}
+
+@keyframes shake {
+    0% {transform: translate(0, 0);}
+    20% {transform: translate(-2px, 1px);}
+    40% {transform: translate(2px, -1px);}
+    60% {transform: translate(-1px, 2px);}
+    80% {transform: translate(1px, -2px);}
+    100% {transform: translate(0, 0);}
+}
+
+
+
+.intro_pics {
+    flex: 1;
+    position: relative;
+    border-radius: 20px;
+    padding-top: 20%;
+} 
+
+.pic_stack {
+    position: relative;
+    width: 14vw;      
+    height: 14vw;     
+    cursor: pointer;
+}
+.pic_stack > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;   /* pic fits within rounded corners */
+    border: 1.5px solid rgb(251, 245, 187);
+    transition: all 0.75s ease;
+}
+.pic_stack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.pic_one {
+    transform: translate(0px, 0px) rotate(0deg);
+    z-index: 4;
+}
+.pic_two {
+    transform: translate(8px, 8px) rotate(2deg);
+    z-index: 3;
+}
+.pic_three {
+    transform: translate(16px, 16px) rotate(4deg);
+    z-index: 2;
+}
+.pic_four {
+    transform: translate(24px, 24px) rotate(6deg);
+    z-index: 1;
+}
+.pic_one.active, .pic_two.active, .pic_three.active, .pic_four.active {
+    z-index: 10;
+}

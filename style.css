@@ -19,7 +19,7 @@ ul {
     width: auto;
     min-width: 600px;
     max-width: 70%;
-    border-radius: 0 0 10px 10px;   /* round bottom corners */
+    border-radius: 0 0 15px 15px;   /* round bottom corners */
 }
 ul li {
     float: left;    /* place elements side by side */
@@ -32,11 +32,24 @@ ul li a {
     text-decoration: none;      /* remove underline */
     color: rgb(185, 185, 185);      /* really light gray */
     font-size: 0.95rem;
+    font-weight: 500;
     transition: all 0.5s ease;
 }
 ul li a:hover {
     color: white;
     font-size: 1rem;
+}
+
+ul li:first-child a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+} 
+ul li:first-child a mark{
+    background-color: transparent;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: rgb(251, 245, 187);
 }
 
 /* socials */
@@ -73,14 +86,15 @@ ul li a:hover {
 .socials .fa-linkedin {     /* linkedin icon */
     color: rgb(185, 185, 185);
 }
-.socials .fa-envelope:hover {     /* envelope icon */
+.socials .fa-envelope:hover {     
     color: white;
 }
-.socials .fa-github:hover {     /* github icon */
+.socials .fa-github:hover {     
     color: white;
 }
-.socials .fa-linkedin:hover {     /* linkedin icon */
+.socials .fa-linkedin:hover { 
     color: white;
 }
+
 
 

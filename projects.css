@@ -13,11 +13,42 @@ h4 {
     color: white;
     margin-top: 7rem;
 }
-
 h5 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: normal;
     margin-top: -1rem;
+    color: white;
+}
+
+.email_helper_app {
+    width: 50%;
+    height: 100%;
+    margin-top: 2.5rem;
+    display: flex;  /* align projects box and text side by side */
+    gap: 2rem;
+}
+.projects_box {
+    width: 50%;
+    height: 45%;
+    background-color: pink;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;  /* pic at end of box */
+}
+
+.projects_email_pic {
+    width: 92%;
+    height: 87%;
+    transition: width 0.3s ease, height 0.3s ease;  /* smoother transition */
+}
+.projects_email_pic:hover {
+    width: 95%;
+    height: 88%;
+}
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
     color: white;
 }

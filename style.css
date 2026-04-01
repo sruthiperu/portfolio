@@ -4,6 +4,11 @@ html, body {
     background-color: black;
 }
 
+::selection {
+    background-color: rgb(251, 245, 187);   /* background color of content that user highlights */
+    color: black;           /* color of content */                    
+}
+
 /* navigation bar */
 ul {
     list-style-type: none;

@@ -13,7 +13,7 @@ html, body {
 }
 
 .projects h6 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: white;
     margin-bottom: 2rem;
     font-weight: 500;
@@ -45,6 +45,9 @@ html, body {
 
 
 .projects_box {
+    display: flex;           
+    flex-direction: column;
+    position: relative;
     background: rgb(21, 21, 21);
     border-radius: 15px;
     border: 1px solid rgba(185, 185, 185, 0.4);     /* rgba(251, 245, 187, 0.3) */
@@ -54,4 +57,67 @@ html, body {
     height: 35vh;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
+}
+
+
+.projects_title {
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    padding-left: 1.4rem;
+    padding-top: 1.1rem;
+}
+
+.tech_stack {
+    padding-left: 1.4rem;
+    padding-bottom: 1.4rem;
+    margin-top: auto;
+    cursor: pointer;
+}
+.technology {
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: white;      /* rgb(251, 245, 187) */
+    border-radius: 10px;
+    padding: 0.25rem 0.55rem;
+}
+
+
+/* remaining tech (e.g., +3) */
+.remaining_tech {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+/* tooltip styling */
+.tooltip {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 150%;          /* place tooltip below +3 */
+    left: 140%;          
+    transform: translate(-50%, 10px) scale(0.95);   /* begin lower & smaller */
+    white-space: nowrap;        /* text on one line */
+
+    background: rgb(251, 245, 187);
+    border-radius: 10px;
+    padding: 0.4rem 0.6rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+    opacity: 0;             /* bhide tooltip */
+    pointer-events: none;  
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+
+    font-weight: 450;
+}
+
+/* show tooltip on hover */
+.remaining_tech:hover .tooltip {
+    opacity: 1;             /* show tooltip */
+    pointer-events: auto; 
+    transform: translate(-50%, 0) scale(1);
 }

@@ -38,6 +38,7 @@
 .intro_text h3 mark {
     background-color: transparent;
     color: rgb(251, 245, 187);
+    font-weight: 650;
     line-height: 1.4;
 }
 .intro_text h4 {

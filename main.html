@@ -8,95 +8,123 @@
     </head>
 
     <body>
+        
+
+        <!-- navigation bar
+            top center of screen horizontally, at top at all times -->
+        <ul>
+            <li><a href="#">sruthi<mark>peru</mark>malla</a></li>    <!-- closer to left -->
+            <li><a href="#">Projects</a></li>           <!-- closer to right -->
+            <li><a href="#">About</a></li>              <!-- closer to right, add some favorites (?) -->
+            <li><a href="#">Contact Me</a></li>            <!-- closer to right -->
+        </ul>
+
+        <!-- rounded box with social links (email, github, linkedin) 
+            bottom center of screen horizontally, at bottom at all times -->
+        <div class="socials">
+            <a href="mailto:srperuma@ucsc.com">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://github.com/sruthiperu" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sruthi-perumalla1/" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+
+        <!-- intro -->
+        <div class="intro">
+            <!-- intro left side -->
+            <div class="intro_text">
+                <h1>Hey, I'm Sruthi!</h1>
+                <h2>Computer Science & Applied Math at UC Santa Cruz</h2>
+                <h3>I'm an aspiring engineer based in the Bay Area, passionate about<br>
+                    building <mark>accessible, user-centered</mark> applications.
+                <h4>Love scaling solutions that address both technical limitations<br>
+                    and everyday challenges!</h4>
+                <h5>Caffeine enthusiast, but can build without it <i class="fa-solid fa-bolt"></i></h5>
+            </div>
+
+            <!-- intro right side -->
+            <div class="intro_pics">
+                <div class="pic_stack" onclick="rotate_photo()">        <!-- flip through pictures on right -->
+                    <div class="pic_one active">
+                        <img src="images/pic_one.png">
+                    </div>
+                    <div class="pic_two">
+                        <img src="images/pic_two.png">
+                    </div>
+                    <div class="pic_three">
+                        <img src="images/pic_three.png">
+                    </div>
+                    <div class="pic_four">
+                        <img src="images/pic_four.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- projects -->
+        <div class="projects">
+            <h6>Projects</h6>
+
+            <!-- email helper app -->
+            <div class="projects_box">      <!-- rounded box wrapping pic of app + description -->
+                <div class="projects_text">
+                    <div class="projects_title">Email Helper App</div>
+
+                </div>
+                <!-- project description -->
+                <span class="project_text">
+                    
+                </span>
+
+                <!-- picture of app within box -->
+                <!-- links to github and live app (if applicable) at top right -->
+                <!-- technologies used at bottom -->
+                <div class="tech_stack">
+                    <span class="technology">Python</span>
+                    <span class="technology">Streamlit</span>
+                    <span class="technology">OpenAI API</span>
+                    <div class="remaining_tech">
+                        <span class="technology">+3</span>      <!-- Pandas, YAML, JSON -->     
+                        <div class="tooltip">
+                            Pandas, YAML, JSON
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- research -->
+            <div class="projects_box">
+                <div class="projects_text">
+                    <div class="projects_title">Bechdel Test Automation</div>
+                </div>
+                <!-- research project - 'in progress' -->
+            </div>
+
+            <!-- sorting visualizer -->
+            <div class="projects_box">
+                <div class="projects_text">
+                    <div class="projects_title">Sorting Visualizer</div>
+                </div>
+            </div>
+
+            <!-- this portfolio -->
+            <div class="projects_box">
+                <div class="projects_text">
+                    <div class="projects_title">This Portfolio!</div>
+                </div>
+                <!-- bonus -->
+            </div>
+        </div>
+        
+        <!-- about -->
+
+        
         <script src="pic_stack.js"></script>    <!-- pic stack animation -->
-    </body>
-
-    <!-- navigation bar
-        top center of screen horizontally, at top at all times -->
-    <ul>
-        <li><a>sruthi<mark>peru</mark>malla</a></li>    <!-- closer to left -->
-        <li><a>Projects</a></li>           <!-- closer to right -->
-        <li><a>About</a></li>              <!-- closer to right, add some favorites (?) -->
-        <li><a>Contact Me</a></li>            <!-- closer to right -->
-    </ul>
-
-    <!-- rounded box with social links (email, github, linkedin) 
-        bottom center of screen horizontally, at bottom at all times -->
-    <div class="socials">
-        <a href="mailto:srperuma@ucsc.com">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
-        <a href="https://github.com/sruthiperu" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/sruthi-perumalla1/" target="_blank" rel="noopener noreferrer">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-    </div>
-
-    <!-- intro -->
-    <div class="intro">
-        <!-- intro left side -->
-        <div class="intro_text">
-            <h1>Hey, I'm Sruthi!</h1>
-            <h2>Computer Science & Applied Math at UC Santa Cruz</h2>
-            <h3>I'm an aspiring engineer based in the Bay Area, passionate about<br>
-                building <mark>accessible, user-centered</mark> applications.
-            <h4>Love scaling solutions that address both technical limitations<br>
-                and everyday challenges!</h4>
-            <h5>Caffeine enthusiast, but can build without it <i class="fa-solid fa-bolt"></i></h5>
-        </div>
-
-        <!-- intro right side -->
-        <div class="intro_pics">
-            <div class="pic_stack" onclick="rotate_photo()">        <!-- flip through pictures on right -->
-                <div class="pic_one active">
-                    <img src="images/pic_one.png">
-                </div>
-                <div class="pic_two">
-                    <img src="images/pic_two.png">
-                </div>
-                <div class="pic_three">
-                    <img src="images/pic_three.png">
-                </div>
-                <div class="pic_four">
-                    <img src="images/pic_four.png">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- projects -->
-    <div class="projects">
-        <h6>Projects</h6>
-
-        <!-- email helper app -->
-        <div class="projects_box">      <!-- rounded box wrapping pic of app + description -->
-            <div class="projects_text">
-                
-            </div>
-            <!-- picture of app within box -->
-            <!-- links to github and live app (if applicable) at top right -->
-            <!-- technologies used at bottom -->
-        </div>
-
-        <!-- research -->
-        <div class="projects_box">
-            <!-- research project - 'in progress' -->
-        </div>
-
-        <!-- sorting visualizer -->
-        <div class="projects_box">
-
-        </div>
-
-        <!-- this portfolio -->
-        <div class="projects_box">
-            <!-- bonus -->
-        </div>
-    </div>
     
-    <!-- about -->
-
+    </body>
 
 </html>

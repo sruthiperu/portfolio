@@ -2,53 +2,56 @@ html, body {
     margin: 0;
 }
 
-#projects {
-    background: rgb(16, 24, 39);
-    align-items: center;        /* center in window's width */
-}
-
-h4 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    color: white;
-    margin-top: 7rem;
-}
-h5 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin-top: -1rem;
-    color: white;
-}
-
-.email_helper_app {
-    width: 50%;
-    height: 100%;
-    margin-top: 2.5rem;
-    display: flex;  /* align projects box and text side by side */
-    gap: 2rem;
-}
-.projects_box {
-    width: 50%;
-    height: 45%;
-    background-color: pink;
-    border-radius: 12px;
+.projects {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;  /* pic at end of box */
+    flex-direction: column;
+    justify-content: center;    /* center in window's height */
+    align-items: center;        /* center in window's width */
+    background-color: black;
+    min-height: auto;          
+    padding-top: 4.5%;
 }
 
-.projects_email_pic {
-    width: 92%;
-    height: 87%;
-    transition: width 0.3s ease, height 0.3s ease;  /* smoother transition */
-}
-.projects_email_pic:hover {
-    width: 95%;
-    height: 88%;
-}
-h6 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
+.projects h6 {
+    font-size: 1.4rem;
     color: white;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+.projects h6::before, .projects h6::after {
+    content: '';
+    position: absolute;
+    top: 50%;       /* make line halfway down heading */
+    width: 17vw;
+    height: 0.5px;
+    background: linear-gradient(to right, rgb(251, 245, 187), rgb(251, 246, 200));
+    transform: translateY(-50%);
+}
+
+.projects h6::before {
+    right: 100%;    /* line's right edge at h6's left edge */
+    transform: rotate(180deg);
+    background: linear-gradient(90deg, rgb(251, 245, 187), rgba(251, 245, 187, 0.8), transparent);
+}
+
+.projects h6::after {
+    left: 100%;     /* line's left edge at h6's right edge */
+    background: linear-gradient(90deg, rgba(251, 245, 187, 0.8), rgb(251, 245, 187), transparent);
+}
+
+
+.projects_box {
+    background: rgb(21, 21, 21);
+    border-radius: 15px;
+    border: 1px solid rgba(185, 185, 185, 0.4);     /* rgba(251, 245, 187, 0.3) */
+    /* overflow: hidden; */
+    transition: all 0.3s ease;
+    width: 60%;
+    height: 35vh;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
 }

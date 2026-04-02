@@ -59,6 +59,11 @@ html, body {
     margin-bottom: 2rem;
     gap: 1rem;
     flex-wrap: wrap;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.project_box:hover {
+    border: 1px solid white;  
 }
 
 /* left of project box: title, technologies used, description, links to app/github */

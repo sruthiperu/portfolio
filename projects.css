@@ -91,9 +91,12 @@ html, body {
 .technology {
     font-size: 0.9rem;
     font-weight: 500;
-    background: white;      /* rgb(251, 245, 187) */
+    background: rgb(200, 200, 200); /* white */     /* rgb(251, 245, 187) */
     border-radius: 10px;
     padding: 0.15rem 0.6rem;
+}
+.project_box:hover .technology {
+    background: white;
 }
 /* remaining tech (e.g., +3) */
 .remaining_tech {
@@ -111,7 +114,7 @@ html, body {
     transform: translate(-50%, 10px) scale(0.95);   /* begin lower and smaller */
     white-space: nowrap;        /* text on one line */
 
-    background: rgb(251, 245, 187);
+    background: rgba(251, 245, 187, 0.8);
     border-radius: 10px;
     padding: 0.4rem 0.6rem;
 
@@ -140,7 +143,7 @@ html, body {
 
 .project_links a {
     text-decoration: none;
-    background-color: white;
+    background-color: rgb(200, 200, 200); /* white */
     color: black;
     font-size: 1rem;
     font-weight: 500;
@@ -148,6 +151,9 @@ html, body {
     border-radius: 4px;
     display: inline-block;
     transition: all 0.4s ease;
+}
+.project_box:hover .project_links a {
+    background-color: white;
 }
 .project_links a:hover {
     text-decoration: none;
@@ -192,9 +198,10 @@ html, body {
     height: auto;
     max-width: 95%;
     max-height: 95%;
-    object-fit: contain;
+    object-fit: cover;  /* contain */
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease;
+    box-shadow: 0 0 15px rgb(21, 21, 21, 0.7);
 }
 .project_pic_wrapper:hover .project_pic img {
     transform: scaleX(1.06) scaleY(1.04);

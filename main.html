@@ -14,8 +14,8 @@
             top center of screen horizontally, at top at all times -->
         <ul>
             <li><a href="#">sruthi<mark>peru</mark>malla</a></li>    <!-- closer to left -->
-            <li><a href="#">Projects</a></li>           <!-- closer to right -->
-            <li><a href="#">About</a></li>              <!-- closer to right, add some favorites (?) -->
+            <li><a href="#projects_section">Projects</a></li>           <!-- closer to right -->
+            <!-- <li><a href="#">About</a></li>              closer to right, add some favorites (?) -->
             <li><a href="#">Contact Me</a></li>            <!-- closer to right -->
         </ul>
 
@@ -66,57 +66,172 @@
         </div>
 
         <!-- projects -->
-        <div class="projects">
+        <div class="projects" id="projects_section">
             <h6>Projects</h6>
 
             <!-- email helper app -->
-            <div class="projects_box">      <!-- rounded box wrapping pic of app + description -->
-                <div class="projects_text">
-                    <div class="projects_title">Email Helper App</div>
+            <div class="project_box">      <!-- rounded box wrapping pic of app + description -->
+                <div class="project_left">
+                    <div class="project_title">AI Email Assistant</div>
 
+                    <!-- technologies used -->
+                    <div class="tech_stack">
+                        <span class="technology">Python</span>
+                        <span class="technology">Streamlit</span>
+                        <span class="technology">OpenAI API</span>
+                        <div class="remaining_tech">
+                            <span class="technology">+2</span>      <!-- Pandas, YAML, JSON -->     
+                            <div class="tooltip">
+                                YAML, JSON
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- project description -->
+                    <span class="project_description">
+                        Tailors email length & tone based on user input using GPT 4o-mini and GPT 4.1.
+                        Built in ServiceNow's AI.Accelerate bootcamp, with an end-to-end evaluation framework 
+                        using LLM-as-a-judge.
+                    </span>
+
+                    <!-- links to github and live app (if available) below text -->
+                    <div class="project_links">
+                        <a href="https://github.com/sruthiperu/email_helper_app" target="_blank" rel="noopener noreferrer" class="github_link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
                 </div>
-                <!-- project description -->
-                <span class="project_text">
+    
+                <div class="project_right">
+                    <!-- picture of app within a rounded box -->
+                    <div class="project_pic_wrapper">
+                        <div class="project_pic">
+                            <img src="images/email_helper_app.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
 
-                </span>
+            <!-- research -->
+            <div class="project_box">      <!-- rounded box wrapping pic of app + description -->
+                <div class="project_left">
+                    <div class="project_title">Bechdel Test Automation</div>
 
-                <!-- picture of app within box -->
-                <!-- links to github and live app (if applicable) at top right -->
-                <!-- technologies used at bottom -->
-                <div class="tech_stack">
-                    <span class="technology">Python</span>
-                    <span class="technology">Streamlit</span>
-                    <span class="technology">OpenAI API</span>
-                    <div class="remaining_tech">
-                        <span class="technology">+3</span>      <!-- Pandas, YAML, JSON -->     
-                        <div class="tooltip">
-                            Pandas, YAML, JSON
+                    <!-- technologies used -->
+                    <div class="tech_stack">
+                        <span class="technology">Python</span>
+                        <span class="technology">CoreNLP</span>
+                        <span class="technology">NLTK</span>
+                        <div class="remaining_tech">
+                            <span class="technology">+4</span>      <!-- NumPy, Matplotlib, Pandas, JSON -->     
+                            <div class="tooltip">
+                                NumPy, Matplotlib, Pandas, JSON
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- project description -->
+                    <span class="project_description">
+                        Researching under Prof. Markus Eger to design and implement an automated Bechdel Test 
+                        evaluation pipeline. Developing NLP models to identify character gender and analyze
+                        conversational context.
+                    </span>
+
+                    <!-- links to github and live app (if available) below text -->
+                    <div class="project_links">
+                        <a href="" onclick="return false;" class="github_link">     
+                            <i class="fa-regular fa-hourglass"></i> In Progress
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="project_right">
+                    <!-- picture of app within a rounded box -->
+                    <div class="project_pic_wrapper">
+                        <div class="project_pic">
+                            <img src="images/bechdel_test.png">
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- research -->
-            <div class="projects_box">
-                <div class="projects_text">
-                    <div class="projects_title">Bechdel Test Automation</div>
-                </div>
-                <!-- research project - 'in progress' -->
-            </div>
-
             <!-- sorting visualizer -->
-            <div class="projects_box">
-                <div class="projects_text">
-                    <div class="projects_title">Sorting Visualizer</div>
+            <div class="project_box">      <!-- rounded box wrapping pic of app + description -->
+                <div class="project_left">
+                    <div class="project_title">Sorting Visualizer</div>
+
+                    <!-- technologies used -->
+                    <div class="tech_stack">
+                        <span class="technology">HTML/CSS</span>
+                        <span class="technology">JavaScript</span>
+                    </div>
+
+                    <!-- project description -->
+                    <span class="project_description">
+                        Interactive sorting algorithm visualizer with animations, designed to make 
+                        various sorting techniques more intuitive and engaging.
+                        Responsive across mobile and desktop devices.
+                    </span>
+
+                    <!-- links to github and live app (if available) below text -->
+                    <div class="project_links">
+                        <a href="https://github.com/sruthiperu/email_helper_app" target="_blank" rel="noopener noreferrer" class="github_link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="demo_link">
+                            <i class="fa-solid fa-up-right-from-square"></i> App
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="project_right">
+                    <!-- picture of app within a rounded box -->
+                    <div class="project_pic_wrapper">
+                        <div class="project_pic">
+                            <img src="images/bechdel_test.png">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- this portfolio -->
-            <div class="projects_box">
-                <div class="projects_text">
-                    <div class="projects_title">This Portfolio!</div>
+            <div class="project_box">      <!-- rounded box wrapping pic of app + description -->
+                <div class="project_left">
+                    <div class="project_title">This Portfolio!</div>
+
+                    <!-- technologies used -->
+                    <div class="tech_stack">
+                        <span class="technology">HTML/CSS</span>
+                        <span class="technology">JavaScript</span>
+                    </div>
+
+                    <!-- project description -->
+                    <span class="project_description">
+                        Learned so much about blending creativity with technical skills.
+                        Had a lot of fun while designing and creating this, thank you for dropping by!
+                        Feedback is always appreciated!
+                    </span>
+
+                    <!-- links to github and live app (if available) below text -->
+                    <div class="project_links">
+                        <a href="https://github.com/sruthiperu/email_helper_app" target="_blank" rel="noopener noreferrer" class="github_link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <!-- <a href="#" class="demo_link">
+                            <i class="fa-solid fa-up-right-from-square"></i> Demo
+                        </a> -->
+                    </div>
                 </div>
-                <!-- bonus -->
+    
+                <div class="project_right">
+                    <!-- picture of app within a rounded box -->
+                    <div class="project_pic_wrapper">
+                        <div class="project_pic">
+                            <img src="images/bechdel_test.png">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         

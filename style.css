@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: black;
+    scroll-behavior: smooth;
 }
 
 ::selection {
@@ -50,11 +51,20 @@ ul li:first-child a {
     letter-spacing: 0.05em;
     color: white;
 } 
-ul li:first-child a mark{
+ul li:first-child a mark {
     background-color: transparent;
     font-size: 1.1rem;
     font-weight: 750;
     color: rgb(251, 245, 187);
+}
+/* switch first child and first child's mark settings when hovering over first child (?) */
+ul li:first-child a:hover {
+    font-weight: 750;
+    color: rgb(251, 245, 187);
+}
+ul li:first-child a mark:hover {
+    font-weight: 650;
+    color: white;
 }
 
 /* socials */
@@ -64,42 +74,43 @@ ul li:first-child a mark{
     position: fixed;     /* make socials box fixed */
     bottom: 0;           /* stick socials box to bottom */
     margin: 0 auto;     /* center socials box */
+    margin-bottom: 0.75rem;
     left: 0;
     right: 0;
-    padding: 1rem 1.4rem;     /* padding on top & bottom, padding on left & right */
-    background-color: rgba(21, 21, 21, 0.8);
+    padding: 0.7rem 1.1rem;     /* padding on top & bottom, padding on left & right */
+    background-color: rgba(251, 245, 187);     /* rgba(21, 21, 21, 0.8); */
     display: flex;
     justify-content: center;
-    gap: 1.75rem;  /* space between icons */
+    gap: 1.6rem;  /* space between icons */
     width: fit-content;
     border-radius: 40px;   /* round corners */
     backdrop-filter: blur(4px);           /* blur content behind socials box*/
 }
 .socials i {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
     transition: all 0.3s ease;
 }
 .socials a:hover i {        /* animation when hovering ovre socials */
     transform: translateY(-4px);
-    font-size: 1.9rem;
+    font-size: 2rem;
 }
 .socials .fa-envelope {     /* envelope icon */
-    color: rgb(185, 185, 185);
+    color: black;   /* rgb(185, 185, 185); */
 }
 .socials .fa-github {     /* github icon */
-    color: rgb(185, 185, 185);
+    color: black;   /* rgb(185, 185, 185); */
 }
 .socials .fa-linkedin {     /* linkedin icon */
-    color: rgb(185, 185, 185);
+    color: black;   /* rgb(185, 185, 185); */
 }
 .socials .fa-envelope:hover {     
-    color: white;
+    color: black;
 }
 .socials .fa-github:hover {     
-    color: white;
+    color: black;
 }
 .socials .fa-linkedin:hover { 
-    color: white;
+    color: black;
 }
 
 

@@ -8,7 +8,8 @@ html, body {
     justify-content: center;    /* center in window's height */
     align-items: center;        /* center in window's width */
     background-color: black;
-    min-height: auto;          
+    /* min-height: 100vh; */
+    height: auto;          
     padding-top: 4.5%;
 }
 
@@ -21,7 +22,6 @@ html, body {
     display: inline-block;
     padding: 0 1rem;
 }
-
 .projects h6::before, .projects h6::after {
     content: '';
     position: absolute;
@@ -31,22 +31,21 @@ html, body {
     background: linear-gradient(to right, rgb(251, 245, 187), rgb(251, 246, 200));
     transform: translateY(-50%);
 }
-
 .projects h6::before {
     right: 100%;    /* line's right edge at h6's left edge */
     transform: rotate(180deg);
     background: linear-gradient(90deg, rgb(251, 245, 187), rgba(251, 245, 187, 0.8), transparent);
 }
-
 .projects h6::after {
     left: 100%;     /* line's left edge at h6's right edge */
     background: linear-gradient(90deg, rgba(251, 245, 187, 0.8), rgb(251, 245, 187), transparent);
 }
 
 
-.projects_box {
+
+.project_box {
     display: flex;           
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     background: rgb(21, 21, 21);
     border-radius: 15px;
@@ -54,36 +53,43 @@ html, body {
     /* overflow: hidden; */
     transition: all 0.3s ease;
     width: 60%;
-    height: 35vh;
+    /* height: auto; */
+    align-items: stretch;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-
-.projects_title {
+/* left of project box: title, technologies used, description, links to app/github */
+.project_left {
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    padding: 1.4rem 1.4rem;     /* padding on top & bottom, left & right */
+    gap: 1rem;    /* 7% space b/w elements */
+    justify-content: flex-start;
+}
+.project_title {
     font-size: 1.4rem;
     color: white;
-    margin-bottom: 2rem;
     font-weight: 600;
-    padding-left: 1.4rem;
-    padding-top: 1.1rem;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
 }
 
-.tech_stack {
-    padding-left: 1.4rem;
-    padding-bottom: 1.4rem;
-    margin-top: auto;
-    cursor: pointer;
+.tech_stack {    
+    display: flex;
+    gap: 0.6rem;    /*  space b/w techs */
+    align-items: center;
 }
 .technology {
     font-size: 0.9rem;
     font-weight: 500;
     background: white;      /* rgb(251, 245, 187) */
     border-radius: 10px;
-    padding: 0.25rem 0.55rem;
+    padding: 0.15rem 0.6rem;
 }
-
-
 /* remaining tech (e.g., +3) */
 .remaining_tech {
     position: relative;
@@ -91,21 +97,18 @@ html, body {
     cursor: pointer;
     font-size: 0.85rem;
 }
-
-/* tooltip styling */
 .tooltip {
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    bottom: 150%;          /* place tooltip below +3 */
+    bottom: 125%;          /* place tooltip above +3 */
     left: 140%;          
-    transform: translate(-50%, 10px) scale(0.95);   /* begin lower & smaller */
+    transform: translate(-50%, 10px) scale(0.95);   /* begin lower and smaller */
     white-space: nowrap;        /* text on one line */
 
     background: rgb(251, 245, 187);
     border-radius: 10px;
     padding: 0.4rem 0.6rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 
     opacity: 0;             /* bhide tooltip */
     pointer-events: none;  
@@ -114,10 +117,81 @@ html, body {
 
     font-weight: 450;
 }
-
-/* show tooltip on hover */
-.remaining_tech:hover .tooltip {
+/* show tooltip when hovering +_ or tooltip itself */
+.remaining_tech:hover .tooltip, .remaining_tech .tooltip:hover {
     opacity: 1;             /* show tooltip */
     pointer-events: auto; 
     transform: translate(-50%, 0) scale(1);
 }
+
+.project_description {
+    font-size: 1rem;
+    color: rgb(185, 185, 185);
+    font-weight: 500;
+    line-height: 1.5rem;
+    padding-right: 1.4rem;
+    padding-bottom: 0.5rem;
+}
+
+.project_links a {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    display: inline-block;
+    transition: all 0.4s ease;
+}
+.project_links a:hover {
+    text-decoration: none;
+    background-color: rgb(251, 245, 187);
+    color: black;
+    font-size: 1.1rem;
+}
+
+
+
+/* right of project box: app picture bounded in rounded box */
+.project_right {
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    padding: 1.4rem 1.4rem;
+    justify-content: center;
+}
+
+.project_pic_wrapper {
+    height: 75%;
+    background-color: rgb(251, 245, 187);        
+    border-radius: 15px;  
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;       /* so that when hovering, pics seem cropped within the wrapper */ 
+}
+.project_pic {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.project_pic img {
+    width: 88%;
+    height: auto;
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.project_pic_wrapper:hover .project_pic img {
+    transform: scaleX(1.06) scaleY(1.04);
+}
+

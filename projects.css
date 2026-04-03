@@ -13,38 +13,9 @@ html, body {
     padding-top: 4.5%;
 }
 
-.projects h6 {
-    font-size: 1.6rem;
-    color: white;
-    margin-bottom: 2rem;
-    font-weight: 500;
-    position: relative;
-    display: inline-block;
-    padding: 0 1rem;
-}
-.projects h6::before, .projects h6::after {
-    content: '';
-    position: absolute;
-    top: 50%;       /* make line halfway down heading */
-    width: 17vw;
-    height: 0.5px;
-    background: linear-gradient(to right, rgb(251, 245, 187), rgb(251, 246, 200));
-    transform: translateY(-50%);
-}
-.projects h6::before {
-    right: 100%;    /* line's right edge at h6's left edge */
-    transform: rotate(180deg);
-    background: linear-gradient(90deg, rgb(251, 245, 187), rgba(251, 245, 187, 0.8), transparent);
-}
-.projects h6::after {
-    left: 100%;     /* line's left edge at h6's right edge */
-    background: linear-gradient(90deg, rgba(251, 245, 187, 0.8), rgb(251, 245, 187), transparent);
-}
-
-
 
 .project_box {
-    display: flex;           
+    display: flex;        
     flex-direction: row;
     position: relative;
     background: rgb(21, 21, 21);
@@ -63,7 +34,7 @@ html, body {
     transition: all 0.3s ease;
 }
 .project_box:hover {
-    border: 1px solid white;  
+    border: 1px solid rgb(252, 249, 207);   /* white */
 }
 
 /* left of project box: title, technologies used, description, links to app/github */
@@ -202,6 +173,7 @@ html, body {
     display: block;
     transition: transform 0.6s ease;
     box-shadow: 0 0 15px rgb(21, 21, 21, 0.7);
+    border-radius: 5px 5px 0px 0px;     /* slightly round top corners */
 }
 .project_pic_wrapper:hover .project_pic img {
     transform: scaleX(1.06) scaleY(1.04);

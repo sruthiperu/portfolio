@@ -1,9 +1,13 @@
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sruthi's Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="intro.css">
         <link rel="stylesheet" href="projects.css">
+        <link rel="stylesheet" href="contact.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     </head>
 
@@ -16,7 +20,7 @@
             <li><a href="#">sruthi<mark>peru</mark>malla</a></li>    <!-- closer to left -->
             <li><a href="#projects_section">Projects</a></li>           <!-- closer to right -->
             <!-- <li><a href="#">About</a></li>              closer to right, add some favorites (?) -->
-            <li><a href="#">Contact Me</a></li>            <!-- closer to right -->
+            <li><a href="#contact_section">Contact</a></li>            <!-- closer to right -->
         </ul>
 
         <!-- rounded box with social links (email, github, linkedin) 
@@ -39,11 +43,11 @@
             <div class="intro_text">
                 <h1>Hey, I'm Sruthi!</h1>
                 <h2>Computer Science & Applied Math at UC Santa Cruz</h2>
-                <h3>I'm an aspiring software engineer, based in the Bay Area, <br>
-                    passionate about building <mark>accessible, user-centered</mark> applications.
-                <h4>Love scaling solutions that address both technical limitations<br>
-                    and everyday challenges!</h4>
-                <h5>Also caffeine-driven, but can build without it <i class="fa-solid fa-bolt"></i></h5>
+                <p class="intro_p1">I'm an aspiring software engineer, based in the Bay Area, <br>
+                    passionate about building <mark>accessible, user-centered</mark> applications.</p>
+                <p class="intro_p2">Love scaling solutions that address both technical limitations<br>
+                    and everyday challenges!</p>
+                <p class="intro_p3">Also caffeine-driven, but can build without it <i class="fa-solid fa-bolt"></i></p>
             </div>
 
             <!-- intro right side -->
@@ -67,7 +71,7 @@
 
         <!-- projects -->
         <div class="projects" id="projects_section">
-            <h6>Projects</h6>
+            <h3 class="h3">Projects</h3>
 
             <!-- email helper app -->
             <div class="project_box">      <!-- rounded box wrapping pic of app + description -->
@@ -205,9 +209,9 @@
 
                     <!-- project description -->
                     <span class="project_description">
-                        Learned so much about blending creativity with technical skills.
-                        Had a lot of fun while designing and creating this, thank you for dropping by!
-                        Feedback is always appreciated!
+                        Learned a lot about blending creativity with technical skills, and
+                        had so much fun designing and creating this. Thank you for dropping by,
+                        feedback is always appreciated!
                     </span>
 
                     <!-- links to github and live app (if available) below text -->
@@ -232,7 +236,41 @@
             </div>
         </div>
         
-        <!-- about -->
+        <!-- contact -->
+        <div class="contact" id="contact_section">
+            <h3 class="h3">Contact</h3>
+
+            <div class="contact_box">
+                <div class="contact_left">
+                    <p class="contact_p1">I'd love to hear from you!</p>
+                    <p class="contact_p2">
+                        Feel free to send me an <a href="mailto:srperuma@ucsc.com">email</a>, 
+                        reach out on <a href="https://www.linkedin.com/in/sruthi-perumalla1/">LinkedIn</a>, 
+                        or shoot me a quick message!<br>
+                    </p>
+                </div>
+
+                <!-- actual contact form -->
+                <div class="contact_right">
+                    <div class="input_group">
+                        <p class="form_label">Name</p>
+                        <input type="text" name="name" autocomplete="off" required>
+                    </div>
+                    
+                    <div class="input_group">
+                        <p class="form_label">Email Address</p>
+                        <input type="email" name="email" autocomplete="off" required>
+                    </div>
+
+                    <div class="input_group">
+                        <p class="form_label">Message</p>
+                        <textarea rows="5" cols="60" name="message" autocomplete="off" required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </div>
+            </div>
+        </div>
 
         
         <script src="pic_stack.js"></script>    <!-- pic stack animation -->

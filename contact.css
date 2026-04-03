@@ -17,7 +17,7 @@ html, body {
     flex-direction: row;
     justify-content: center;
     width: 60%;
-    gap: 5rem;
+    gap: 3rem;
     overflow: wrap;
 }
 
@@ -61,8 +61,8 @@ html, body {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .contact_right:hover {
     border: 1px solid rgb(252, 249, 207);   /* white */
@@ -78,7 +78,7 @@ html, body {
 }
 
 .input_group {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     margin-bottom: 1rem;
 }

@@ -16,15 +16,14 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 60%;
-    gap: 3rem;
-    overflow: wrap;
+    width: 85%;
+    gap: 2.25rem;
 }
 
 .contact_left {
     display: flex;
     flex-direction: column;
-    flex: 0.75;
+    flex: 1.25;
     justify-content: center;
 }
 
@@ -34,6 +33,10 @@ html, body {
     margin-bottom: 1rem;
     font-weight: 600;
     text-align: center;
+    transition: all 0.4s ease;
+}
+.contact_p1:hover .contact_p2:hover .contact_p1 {
+    font-size: 1.6rem;
 }
 .contact_p2 {
     font-size: 1.05rem;
@@ -41,6 +44,10 @@ html, body {
     line-height: 1.5;
     font-weight: 400;
     text-align: center;
+    transition: all 0.4s ease;
+}
+.contact_p1:hover .contact_p2:hover .contact_p2 {
+    font-size: 1.15rem;
 }
 .contact_p2 a {
     color: rgb(251, 245, 187);
@@ -55,14 +62,15 @@ html, body {
 .contact_right {
     display: flex;
     flex-direction: column;
-    flex: 2.25;
+    flex: 1.75;
     background-color: rgb(21, 21, 21);
     border: 1px solid rgba(185, 185, 185, 0.4);
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    transition: all 0.4s ease;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
 }
 .contact_right:hover {
     border: 1px solid rgb(252, 249, 207);   /* white */
@@ -78,27 +86,28 @@ html, body {
 }
 
 .input_group {
-    width: 85%;
     margin: 0 auto;
-    margin-bottom: 1rem;
+    width: 85%;
+    margin-bottom: 0.75rem;
 }
 .form_label {
-    font-size: 0.95rem;
-    color: white;
-    font-weight: 500;
+    color: rgb(185, 185, 185);
+    font-weight: 600;
     margin-bottom: -0.5rem;
     align-self: center;
     display: block;
+    font-size: 0.8rem;
 }
 
 input {
     background-color: rgb(225, 225, 225);       /* rgb(225, 225, 225) */
     width: 100%;
-    font-size: 1.1rem;
-    padding: 1rem 1rem;
+    max-width: 100%;
     border-radius: 10px;
     margin-top: 1rem;
     align-self: center;
+    font-size: 0.95rem; 
+    padding: 0.6rem 0.8rem; 
 }
 
 
@@ -113,32 +122,63 @@ input:first-child{
 textarea {
     background-color: rgb(225, 225, 225);
     width: 100%;
-    font-size: 1.1rem;
-    padding: 1rem 1rem;
+    max-width: 100%;
     border-radius: 10px;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.95rem; 
+    padding: 0.8rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-/*
-input:focus-within, textarea:focus-within {
-    outline: none;
-    border-color: white;
-    border-width: 3px;
-} */
 
 button {
     background-color: rgb(225, 225, 225);
+    color: rgb(21, 21, 21);
     border-radius: 10px;
-    font-size: 1.1rem;
-    font-weight: 575;
-    letter-spacing: 0.5px;
-    padding: 0.45rem 1.25rem;
+    font-weight: 600;
     display: flex;
     margin-bottom: 1rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem; 
+    padding: 0.3rem 1rem;
 }
 button:hover {
     opacity: 0.8;
 }
 
+@media (max-width: 900px) {
+    .contact {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+    .contact_box {
+        flex-direction: column;
+        width: 90%;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+    .contact_left,
+    .contact_right {
+        flex: none;
+        width: 100%;
+    }
+    .contact_p1 {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact_box {
+        width: 94%;
+    }
+    .contact_p1 {
+        font-size: 1.25rem;
+    }
+    .contact_p2 {
+        font-size: 0.95rem;
+    }
+    .input_group {
+        width: 90%;
+    }
+}

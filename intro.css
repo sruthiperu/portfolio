@@ -25,13 +25,13 @@
 }
 .intro_text h2 {
     font-size: 1.4rem;
-    color: rgb(215, 212, 212);
+    color: rgb(235, 235, 235);
     margin-bottom: 2rem;
     font-weight: 500;
 }
 .intro_text .intro_p1 {
     font-size: 1.1rem;
-    color: rgb(185, 185, 185);
+    color: rgb(205, 205, 205);
     margin-bottom: 0.6rem;
     font-weight: 500;
     line-height: 1.5rem;
@@ -44,13 +44,13 @@
 }
 .intro_text .intro_p2 {
     font-size: 1.1rem;
-    color: rgb(185, 185, 185);
+    color: rgb(205, 205, 205);
     margin-bottom: 1.1rem;
     font-weight: 500;
 }
 .intro_text .intro_p3 {
     font-size: 1.1rem;
-    color: rgb(185, 185, 185);
+    color: rgb(200, 200, 200);
     margin-bottom: 1.1rem;
     font-weight: 500;
 }
@@ -126,4 +126,61 @@
 }
 .pic_one.active, .pic_two.active, .pic_three.active, .pic_four.active {
     z-index: 10;
+}
+
+@media (max-width: 900px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5.5rem;
+        padding-left: 8%;
+        padding-right: 8%;
+        padding-bottom: 2.5rem;
+        gap: 2rem;
+    }
+    .intro_text {
+        flex: none;
+        width: 100%;
+    }
+    .intro_text h1 {
+        padding-top: 0;
+        font-size: 2rem;
+    }
+    .intro_text h2 {
+        font-size: 1.2rem;
+        margin-bottom: 1.25rem;
+    }
+    .intro_pics {
+        flex: none;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .pic_stack {
+        width: min(210px, 56vw);
+        height: min(210px, 56vw);
+    }
+}
+
+@media (max-width: 600px) {
+    .intro {
+        padding-left: 6%;
+        padding-right: 6%;
+        gap: 1.75rem;
+    }
+    .intro_text h1 {
+        font-size: 1.75rem;
+    }
+    .intro_text h2 {
+        font-size: 1.05rem;
+    }
+    .intro_text .intro_p1, .intro_text .intro_p2, .intro_text .intro_p3 {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+    .pic_stack {
+        width: min(200px, 72vw);
+        height: min(200px, 72vw);
+    }
 }

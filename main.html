@@ -43,9 +43,9 @@
             <div class="intro_text">
                 <h1>Hey, I'm Sruthi!</h1>
                 <h2>Computer Science & Applied Math at UC Santa Cruz</h2>
-                <p class="intro_p1">I'm an aspiring software engineer, based in the Bay Area, <br>
+                <p class="intro_p1">I'm an aspiring software engineer, based in the Bay Area,
                     passionate about building <mark>accessible, user-centered</mark> applications.</p>
-                <p class="intro_p2">Love scaling solutions that address both technical limitations<br>
+                <p class="intro_p2">Love scaling solutions that address both technical limitations
                     and everyday challenges!</p>
                 <p class="intro_p3">Also caffeine-driven, but can build without it <i class="fa-solid fa-bolt"></i></p>
             </div>
@@ -72,9 +72,51 @@
         <!-- projects -->
         <div class="projects" id="projects_section">
             <h3 class="h3">Projects</h3>
+            
+            <!-- yummers -->
+            <div class="project_box" data-project="email">      <!-- rounded box wrapping pic of app + description -->
+                <div class="project_left">
+                    <div class="project_title">Yummers</div>
+
+                    <!-- technologies used -->
+                    <div class="tech_stack">
+                        <span class="technology">Node.js</span>
+                        <span class="technology">React</span>
+                        <span class="technology">Python</span>
+                        <div class="remaining_tech">
+                            <span class="technology">+3</span>  
+                            <div class="tooltip">
+                                Node.js, Docker, PostgreSQL
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- project description -->
+                    <span class="project_description">
+                        A recipe recommendation site where users can input recipes to find matching recipes.
+                        Includes 220,000+ recipes and 30,000+ ingredients, and features an AI agent that customizes recipes to user preferences.          
+                    </span>
+
+                    <!-- links to github and live app (if available) below text -->
+                    <div class="project_links">
+                        <a href="https://github.com/sruthiperu/yummer" target="_blank" rel="noopener noreferrer" class="github_link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="project_right">
+                    <!-- picture of app within a rounded box -->
+                    <div class="project_pic_wrapper">
+                        <div class="project_pic">
+                            <img src="images/sorting_visualizer.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- email helper app -->
-            <div class="project_box">      <!-- rounded box wrapping pic of app + description -->
+            <div class="project_box" data-project="email">      <!-- rounded box wrapping pic of app + description -->
                 <div class="project_left">
                     <div class="project_title">AI Email Assistant</div>
 
@@ -84,7 +126,7 @@
                         <span class="technology">Streamlit</span>
                         <span class="technology">OpenAI API</span>
                         <div class="remaining_tech">
-                            <span class="technology">+2</span>      <!-- Pandas, YAML, JSON -->     
+                            <span class="technology">+2</span>      <!-- Pandas, YAML -->     
                             <div class="tooltip">
                                 YAML, JSON
                             </div>
@@ -93,8 +135,8 @@
 
                     <!-- project description -->
                     <span class="project_description">
-                        Tailors email length & tone based on user input using GPT 4o-mini and GPT 4.1.
-                        Built in ServiceNow's AI.Accelerate bootcamp, with an end-to-end evaluation framework 
+                        Tailors email length & tone based on user input using GPT-4o mini and GPT-4.1.
+                        Built at ServiceNow's AI.Accelerate bootcamp, with an end-to-end evaluation framework 
                         using LLM-as-a-judge.
                     </span>
 
@@ -118,7 +160,7 @@
                 
 
             <!-- research -->
-            <div class="project_box">      <!-- rounded box wrapping pic of app + description -->
+            <div class="project_box" data-project="email">      <!-- rounded box wrapping pic of app + description -->
                 <div class="project_left">
                     <div class="project_title">Bechdel Test Automation</div>
 
@@ -158,80 +200,17 @@
                         </div>
                     </div>
                 </div>
+            </div>  
+            
+            <!-- more projects / github link -->
+            <div class="github-more">
+                <span class="github-more-line">
+                    <a href="https://github.com/sruthiperu" target="_blank" rel="noopener noreferrer">
+                        View more on GitHub!
+                        <i class="fa-solid fa-square-arrow-up-right"></i>
+                    </a>
+                </span>
             </div>
-
-            <!-- sorting visualizer -->
-            <div class="project_box">      <!-- rounded box wrapping pic of app + description -->
-                <div class="project_left">
-                    <div class="project_title">Sorting Visualizer</div>
-
-                    <!-- technologies used -->
-                    <div class="tech_stack">
-                        <span class="technology">HTML/CSS</span>
-                        <span class="technology">JavaScript</span>
-                    </div>
-
-                    <!-- project description -->
-                    <span class="project_description">
-                        Interactive sorting algorithm visualizer with animations, designed to make 
-                        various sorting techniques more intuitive and engaging.
-                        Responsive across mobile and desktop devices.
-                    </span>
-
-                    <!-- links to github and live app (if available) below text -->
-                    <div class="project_links">
-                        <a href="https://github.com/sruthiperu/sorting_visualizer" target="_blank" rel="noopener noreferrer" class="github_link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-    
-                <div class="project_right">
-                    <!-- picture of app within a rounded box -->
-                    <div class="project_pic_wrapper">
-                        <div class="project_pic">
-                            <img src="images/sorting_visualizer.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- this portfolio -->
-            <div class="project_box">      <!-- rounded box wrapping pic of app + description -->
-                <div class="project_left">
-                    <div class="project_title">This Portfolio!</div>
-
-                    <!-- technologies used -->
-                    <div class="tech_stack">
-                        <span class="technology">HTML/CSS</span>
-                        <span class="technology">JavaScript</span>
-                    </div>
-
-                    <!-- project description -->
-                    <span class="project_description">
-                        Learned a lot about blending creativity with technical skills, and
-                        had so much fun designing and creating this. Thank you for dropping by,
-                        feedback is always appreciated!
-                    </span>
-
-                    <!-- links to github and live app (if available) below text -->
-                    <div class="project_links">
-                        <a href="https://github.com/sruthiperu/email_helper_app" target="_blank" rel="noopener noreferrer" class="github_link">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-    
-                <div class="project_right">
-                    <!-- picture of app within a rounded box -->
-                    <div class="project_pic_wrapper">
-                        <div class="project_pic">
-                            <img src="images/personal_portfolio.png">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <!-- contact -->
         <div class="contact" id="contact_section">
@@ -252,26 +231,25 @@
                     <input type="hidden" name="_subject" value="Message from portfolio">
 
                     <div class="input_group">
-                        <p class="form_label">Name</p>
+                        <p class="form_label">NAME</p>
                         <input type="text" name="name" autocomplete="off" required>
                     </div>
                     
                     <div class="input_group">
-                        <p class="form_label">Email Address</p>
+                        <p class="form_label">EMAIL</p>
                         <input type="email" name="email" autocomplete="off" required>
                     </div>
 
                     <div class="input_group">
-                        <p class="form_label">Message</p>
-                        <textarea rows="5" cols="60" name="message" autocomplete="off" required></textarea>
+                        <p class="form_label">MESSAGE</p>
+                        <textarea rows="5" name="message" autocomplete="off" required></textarea>
                     </div>
 
-                    <button type="submit">Send Message</button>
+                    <button type="submit">SEND MESSAGE</button>
                 </div>
             </div>
         </div>
 
-        
         <script src="pic_stack.js"></script>    <!-- pic stack animation -->
     
     </body>

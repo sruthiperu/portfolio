@@ -1,9 +1,13 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: black;
     scroll-behavior: smooth;
-    padding-bottom: 4.5%;
+    padding-bottom: 5.5rem;
 }
 
 ::selection {
@@ -24,8 +28,8 @@ ul {
     background-color: rgba(21, 21, 21, 0.8);
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     width: auto;
-    min-width: 600px;
     max-width: 70%;
     border-radius: 0 0 15px 15px;   /* round bottom corners */
     backdrop-filter: blur(4px);           /* blur content behind navigation bar*/
@@ -143,4 +147,55 @@ ul li:first-child a mark:hover {
 .h3::after {
     left: 100%;     /* line's left edge at h3's right edge */
     background: linear-gradient(90deg, rgba(251, 245, 187, 0.8), rgb(251, 245, 187), transparent);
+}
+
+@media (max-width: 900px) {
+    ul {
+        max-width: 92%;
+        padding: 0.9rem 0.5rem;
+    }
+    ul li a {
+        padding: 0.75rem 0.85rem;
+        font-size: 0.95rem;
+    }
+    ul li a:hover {
+        font-size: 1rem;
+    }
+    ul li:first-child a, ul li:first-child a mark {
+        font-size: 1rem;
+    }
+    .h3::before, .h3::after {
+        width: 10vw;
+    }
+}
+
+@media (max-width: 600px) {
+    ul {
+        max-width: 96%;
+        padding: 0.7rem 0.35rem;
+    }
+    ul li a {
+        padding: 0.5rem 0.45rem;
+        font-size: 0.85rem;
+    }
+    ul li:first-child a, ul li:first-child a mark {
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+    }
+    .h3 {
+        font-size: 1.35rem;
+        margin-top: 1.75rem;
+        margin-bottom: 1.75rem;
+    }
+    .h3::before, .h3::after {
+        width: 6vw;
+    }
+    .socials {
+        gap: 1.2rem;
+        padding: 0.55rem 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    .socials i {
+        font-size: 1.55rem;
+    }
 }

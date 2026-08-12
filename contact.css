@@ -16,14 +16,14 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 85%;
+    width: 95%;
     gap: 2.25rem;
 }
 
 .contact_left {
     display: flex;
     flex-direction: column;
-    flex: 1.25;
+    flex: 1.5;
     justify-content: center;
 }
 
@@ -147,7 +147,7 @@ button:hover {
     opacity: 0.8;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1400px) {
     .contact {
         padding-top: 3rem;
         padding-bottom: 1rem;

@@ -23,7 +23,7 @@ html, body {
     border: 1px solid rgba(185, 185, 185, 0.4);     /* rgba(251, 245, 187, 0.3) */
     /* overflow: hidden; */
     transition: all 0.3s ease;
-    width: 59%;
+    width: 60%;
     /* height: auto; */
     align-items: stretch;
     margin-top: 0.5rem;
@@ -35,7 +35,7 @@ html, body {
 }
 .project_box:hover {
     border: 1px solid rgb(252, 249, 207);   /* white */
-    width: 59.5%;
+    width: 60.5%;
 }
 
 /* left of project box: title, technologies used, description, links to app/github */

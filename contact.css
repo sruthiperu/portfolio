@@ -17,15 +17,17 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 95%;
+    align-items: center;
+    width: 55%;
     gap: 2.25rem;
 }
 
 .contact_left {
     display: flex;
     flex-direction: column;
-    flex: 1.5;
+    flex: 1;
     justify-content: center;
+    min-width: 0;
 }
 
 .contact_p1 {
@@ -65,7 +67,9 @@ html[data-theme="light"] .contact_p2 a {
 .contact_right {
     display: flex;
     flex-direction: column;
-    flex: 1.75;
+    flex: none;
+    width: 400px;
+    max-width: 100%;
     background-color: var(--surface);
     border: 1px solid var(--border);
     align-items: center;
@@ -147,16 +151,23 @@ html[data-theme="light"] .contact_right button {
     .contact {
         padding-top: 3rem;
         padding-bottom: 1rem;
+        padding-left: 4%;
+        padding-right: 4%;
     }
     .contact_box {
         flex-direction: column;
-        width: 65%;
+        width: 94%;
         gap: 1.5rem;
-        align-items: stretch;
+        align-items: center;
     }
-    .contact_left, .contact_right {
+    .contact_left {
         flex: none;
         width: 100%;
+        max-width: 400px;
+    }
+    .contact_right {
+        width: 400px;
+        max-width: 100%;
     }
     .contact_p1 {
         font-size: 1.35rem;
@@ -166,6 +177,12 @@ html[data-theme="light"] .contact_right button {
 @media (max-width: 600px) {
     .contact_box {
         width: 94%;
+        align-items: stretch;
+    }
+    .contact_left,
+    .contact_right {
+        width: 100%;
+        max-width: none;
     }
     .contact_p1 {
         font-size: 1.25rem;

@@ -149,6 +149,35 @@ ul li:first-child a mark:hover {
     background: linear-gradient(90deg, rgba(251, 245, 187, 0.8), rgb(251, 245, 187), transparent);
 }
 
+/* scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 0.6s ease var(--reveal-delay, 0s),
+        transform 0.6s ease var(--reveal-delay, 0s);
+}
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* keep project-card hover transitions while revealing */
+.project_box.reveal {
+    transition:
+        opacity 0.6s ease var(--reveal-delay, 0s),
+        transform 0.6s ease var(--reveal-delay, 0s),
+        border 0.4s ease,
+        width 0.4s ease,
+        background 0.4s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 @media (max-width: 900px) {
     ul {
         max-width: 92%;

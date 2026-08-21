@@ -1,9 +1,12 @@
-<html lang="en">
+<html lang="en" data-theme="dark">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sruthi's Portfolio</title>
+        <script>
+            document.documentElement.setAttribute('data-theme', 'dark');
+        </script>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="intro.css">
         <link rel="stylesheet" href="projects.css">
@@ -21,6 +24,12 @@
             <li><a href="#projects_section">Projects</a></li>           <!-- closer to right -->
             <!-- <li><a href="#">About</a></li>              closer to right, add some favorites (?) -->
             <li><a href="#contact_section">Contact</a></li>            <!-- closer to right -->
+            <li>
+                <button type="button" class="theme-toggle" aria-label="switch to light mode">
+                    <i class="fa-regular fa-sun" aria-hidden="true"></i>
+                    <i class="fa-regular fa-moon" aria-hidden="true"></i>
+                </button>
+            </li>
         </ul>
 
         <!-- rounded box with social links (email, github, linkedin) 
@@ -255,6 +264,7 @@
 
         <script src="pic_stack.js"></script>    <!-- pic stack animation -->
         <script src="reveal.js"></script>       <!-- scroll reveal -->
+        <script src="theme.js"></script>        <!-- light + dark mode -->
     
     </body>
 

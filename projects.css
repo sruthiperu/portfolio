@@ -5,25 +5,22 @@ html, body {
 .projects {
     display: flex;
     flex-direction: column;
-    justify-content: center;    /* center in window's height */
-    align-items: center;        /* center in window's width */
-    background-color: black;
-    /* min-height: 100vh; */
-    height: auto;          
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    height: auto;
     padding-top: 4.5%;
+    transition: background-color 0.35s ease;
 }
 
-
 .project_box {
-    display: flex;        
+    display: flex;
     flex-direction: row;
     position: relative;
-    background: rgb(21, 21, 21);
+    background: var(--surface);
     border-radius: 15px;
-    border: 1px solid rgba(185, 185, 185, 0.4);     /* rgba(251, 245, 187, 0.3) */
-    /* overflow: hidden; */
+    border: 1px solid var(--border);
     width: 60%;
-    /* height: auto; */
     align-items: stretch;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
@@ -33,47 +30,46 @@ html, body {
     transition: all 0.25s ease;
 }
 .project_box:hover {
-    border: 1px solid rgb(252, 249, 207);   /* white */
+    border: 1px solid var(--accent-hover);
     width: 60.5%;
 }
 
-/* left of project box: title, technologies used, description, links to app/github */
 .project_left {
     display: flex;
     flex: 4;
     flex-direction: column;
-    padding: 1.6rem 1.6rem;     /* padding on top & bottom, left & right */
-    gap: 1rem;    
+    padding: 1.6rem 1.6rem;
+    gap: 1rem;
     justify-content: flex-start;
 }
 .project_title {
     font-size: 1.3rem;
-    color: white;
+    color: var(--text);
     font-weight: 600;
     padding-bottom: 0.5rem;
     margin-top: 0;
 }
 
-.tech_stack {    
+.tech_stack {
     display: flex;
-    gap: 0.6rem;    /*  space b/w techs */
+    gap: 0.6rem;
     align-items: center;
 }
 .technology {
     font-size: 0.9rem;
     font-weight: 500;
-    background: rgb(200, 200, 200); /* white */     /* rgb(251, 245, 187) */
+    background: var(--chip);
     border-radius: 10px;
     padding: 0.15rem 0.6rem;
+    color: var(--btn-text);
 }
 .project_box:hover .technology {
-    background: white;
-    /* color: white; */
+    background: var(--chip-hover);
 }
 .project_box:hover .project_description {
-    color: rgb(220, 220, 220);
+    color: var(--text-hover-soft);
 }
-/* remaining tech (e.g., +3) */
+
 .remaining_tech {
     position: relative;
     display: inline-block;
@@ -84,32 +80,29 @@ html, body {
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    bottom: 125%;          /* place tooltip above +3 */
-    left: 140%;          
-    transform: translate(-50%, 10px) scale(0.95);   /* begin lower and smaller */
-    white-space: nowrap;        /* text on one line */
-
-    background: rgb(251, 245, 187);
+    bottom: 125%;
+    left: 140%;
+    transform: translate(-50%, 10px) scale(0.95);
+    white-space: nowrap;
+    background: var(--accent);
+    color: var(--btn-text);
     border-radius: 10px;
     padding: 0.4rem 0.6rem;
-
-    opacity: 0;             /* bhide tooltip */
-    pointer-events: none;  
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
     z-index: 10;
-
     font-weight: 450;
 }
-/* show tooltip when hovering +_ or tooltip itself */
 .remaining_tech:hover .tooltip, .remaining_tech .tooltip:hover {
-    opacity: 1;             /* show tooltip */
-    pointer-events: auto; 
+    opacity: 1;
+    pointer-events: auto;
     transform: translate(-50%, 0) scale(1);
 }
 
 .project_description {
     font-size: 0.92rem;
-    color: rgb(185, 185, 185);
+    color: var(--text-muted);
     font-weight: 500;
     line-height: 1.5rem;
     padding-right: 1.4rem;
@@ -121,8 +114,8 @@ html, body {
 }
 .project_links a {
     text-decoration: none;
-    background-color: rgb(200, 200, 200); /* white */
-    color: black;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
     font-size: 0.95rem;
     font-weight: 500;
     padding: 0.35rem 0.7rem;
@@ -131,18 +124,15 @@ html, body {
     transition: all 0.4s ease;
 }
 .project_box:hover .project_links a {
-    background-color: white;
+    background-color: var(--btn-hover);
 }
 .project_box .project_links a:hover {
     text-decoration: none;
-    background-color: rgb(251, 245, 187);
-    color: black;
+    background-color: var(--accent);
+    color: var(--btn-text);
     transform: translateY(-2px);
 }
 
-
-
-/* right of project box: app picture bounded in rounded box */
 .project_right {
     display: flex;
     flex: 3;
@@ -153,15 +143,14 @@ html, body {
 
 .project_pic_wrapper {
     height: 75%;
-    background-color: rgb(251, 245, 187);        
-    border-radius: 15px;  
+    background-color: var(--image-backdrop);
+    border-radius: 15px;
     position: relative;
     cursor: pointer;
-    display: inline-block;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    overflow: hidden;       /* so that when hovering, pics seem cropped within the wrapper */ 
+    overflow: hidden;
 }
 .project_pic {
     display: flex;
@@ -176,11 +165,11 @@ html, body {
     height: auto;
     max-width: 95%;
     max-height: 95%;
-    object-fit: cover;  /* contain */
+    object-fit: cover;
     display: block;
     transition: transform 0.6s ease;
-    box-shadow: 0 0 15px rgb(21, 21, 21, 0.7);
-    border-radius: 8px 8px 0px 0px;     /* slightly round top corners */
+    box-shadow: 0 0 15px var(--pic-shadow);
+    border-radius: 8px 8px 0px 0px;
 }
 .project_pic_wrapper:hover .project_pic img {
     transform: scaleX(1.03) scaleY(1.05);
@@ -197,7 +186,7 @@ html, body {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    color: rgb(185, 185, 185);
+    color: var(--text-muted);
     font-size: 1.05rem;
     letter-spacing: 0.3px;
     transition: all 0.3s ease;
@@ -205,12 +194,12 @@ html, body {
     border-radius: 8px;
 }
 .github-more-line i {
-    color: rgb(200, 200, 200);
+    color: var(--text-softer);
     font-size: 1.1rem;
     transition: all 0.4s ease;
 }
 .github-more-line a {
-    color: rgb(185, 185, 185);
+    color: var(--text-muted);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -221,19 +210,12 @@ html, body {
     font-size: 0.8rem;
     transition: transform 0.3s ease;
 }
-.github-more-line:hover {
-    color: rgb(252, 249, 207);
-}
-.github-more-line:hover i {
-    color: rgb(252, 249, 207);
-}
-.github-more-line:hover a {
-    color: rgb(252, 249, 207);
+.github-more-line:hover, .github-more-line:hover i, .github-more-line:hover a {
+    color: var(--accent-hover);
 }
 .github-more-line:hover a .fa-arrow-right {
     transform: translateX(4px);
 }
-
 
 @media (max-width: 1400px) {
     .projects {
@@ -248,7 +230,7 @@ html, body {
         gap: 0;
     }
     .project_box:hover {
-        width: 67%;
+        width: 65%;
     }
     .project_left {
         flex: none;
@@ -261,7 +243,6 @@ html, body {
         order: -1;
         padding: 0;
     }
-    /* drop cream image-card chrome; keep the screenshot */
     .project_pic_wrapper {
         height: auto;
         min-height: 0;
@@ -298,12 +279,11 @@ html, body {
         max-width: 220px;
     }
     .github-more {
-        width: 92%;
+        width: 65%;
         flex-wrap: wrap;
         text-align: center;
     }
 }
-
 
 @media (max-width: 600px) {
     .project_box {
@@ -328,4 +308,3 @@ html, body {
         justify-content: center;
     }
 }
-

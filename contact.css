@@ -5,11 +5,12 @@ html, body {
 .contact {
     display: flex;
     flex-direction: column;
-    justify-content: center;    /* center in window's height */
-    align-items: center;        /* center in window's width */
-    background-color: black;
-    height: auto;          
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    height: auto;
     padding-top: 4.5%;
+    transition: background-color 0.35s ease;
 }
 
 .contact_box {
@@ -29,7 +30,7 @@ html, body {
 
 .contact_p1 {
     font-size: 1.5rem;
-    color: white;
+    color: var(--text);
     margin-bottom: 1rem;
     font-weight: 600;
     text-align: center;
@@ -40,7 +41,7 @@ html, body {
 }
 .contact_p2 {
     font-size: 1.05rem;
-    color: rgb(185, 185, 185);
+    color: var(--text-muted);
     line-height: 1.5;
     font-weight: 400;
     text-align: center;
@@ -50,21 +51,23 @@ html, body {
     font-size: 1.15rem;
 }
 .contact_p2 a {
-    color: rgb(251, 245, 187);
+    color: var(--accent);
     text-decoration: none;
     font-weight: 500;
+}
+html[data-theme="light"] .contact_p2 a {
+    color: color-mix(in srgb, var(--accent) 78%, #000000);
 }
 .contact_p2 a:hover {
     text-decoration: underline;
 }
 
-/* contact form */
 .contact_right {
     display: flex;
     flex-direction: column;
     flex: 1.75;
-    background-color: rgb(21, 21, 21);
-    border: 1px solid rgba(185, 185, 185, 0.4);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
     align-items: center;
     justify-content: center;
     border-radius: 10px;
@@ -73,16 +76,10 @@ html, body {
     padding-bottom: 0.8rem;
 }
 .contact_right:hover {
-    border: 1px solid rgb(252, 249, 207);   /* white */
+    border: 1px solid var(--accent-hover);
 }
-.contact_right:hover input {
-    background-color: white;
-}
-.contact_right:hover textarea {
-    background-color: white;
-}
-.contact_right:hover button {
-    background-color: white;
+.contact_right:hover input, .contact_right:hover textarea, .contact_right:hover button {
+    background-color: var(--form-field-hover);
 }
 
 .input_group {
@@ -91,7 +88,7 @@ html, body {
     margin-bottom: 0.75rem;
 }
 .form_label {
-    color: rgb(185, 185, 185);
+    color: var(--text-muted);
     font-weight: 600;
     margin-bottom: -0.5rem;
     align-self: center;
@@ -99,51 +96,50 @@ html, body {
     font-size: 0.8rem;
 }
 
-input {
-    background-color: rgb(225, 225, 225);       /* rgb(225, 225, 225) */
+.contact_right input {
+    background-color: var(--form-field);
     width: 100%;
     max-width: 100%;
     border-radius: 10px;
     margin-top: 1rem;
     align-self: center;
-    font-size: 0.95rem; 
-    padding: 0.6rem 0.8rem; 
+    font-size: 0.95rem;
+    padding: 0.6rem 0.8rem;
+    color: #000000;
+    border: 1px solid var(--form-outline);
 }
 
-
-input:first-child{
-    background-color: white;
-    width: 80%;
-    font-size: 1.1rem;
-    padding: 1rem 1rem;
-    border-radius: 10px;
-    margin-top: 2rem;
-}
-textarea {
-    background-color: rgb(225, 225, 225);
+.contact_right textarea {
+    background-color: var(--form-field);
     width: 100%;
     max-width: 100%;
     border-radius: 10px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 0.95rem; 
+    font-size: 0.95rem;
     padding: 0.8rem 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    color: #000000;
+    border: 1px solid var(--form-outline);
 }
 
-button {
-    background-color: rgb(225, 225, 225);
-    color: rgb(21, 21, 21);
+.contact_right button {
+    background-color: var(--form-field);
+    color: rgb(40, 40, 40);
     border-radius: 10px;
     font-weight: 600;
     display: flex;
     margin-bottom: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 0.95rem; 
+    font-size: 0.95rem;
     padding: 0.3rem 1rem;
+    border: none;
 }
-button:hover {
+html[data-theme="light"] .contact_right button {
+    color: var(--text-muted);
+}
+.contact_right button:hover {
     opacity: 0.8;
 }
 
@@ -154,12 +150,11 @@ button:hover {
     }
     .contact_box {
         flex-direction: column;
-        width: 90%;
+        width: 65%;
         gap: 1.5rem;
         align-items: stretch;
     }
-    .contact_left,
-    .contact_right {
+    .contact_left, .contact_right {
         flex: none;
         width: 100%;
     }

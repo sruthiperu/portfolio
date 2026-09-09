@@ -105,7 +105,7 @@ ul li:first-child {
     margin-right: auto;
 }
 ul li a, .theme-toggle {
-    padding: 0.85rem 1.5rem;
+    padding: 0.85rem 0.7rem;
     color: var(--nav-link);
     font-size: 1rem;
     font-weight: 500;
@@ -120,6 +120,20 @@ ul li a:hover,
 .theme-toggle:hover {
     color: var(--nav-link-hover);
     font-size: 1.05rem;
+}
+.theme-toggle:hover i {
+    color: var(--nav-link-hover);
+}
+
+ul li:not(:first-child) a {
+    text-transform: lowercase;
+    letter-spacing: 0.04em;
+    font-size: 0.95rem;
+    font-weight: 450;
+}
+ul li:not(:first-child) a:hover {
+    font-size: 0.95rem;
+    color: var(--nav-link-hover);
 }
 
 ul li:first-child a {
@@ -143,7 +157,7 @@ ul li:first-child a mark:hover {
     color: var(--text);
 }
 
-/* theme toggle — same padding as other nav items */
+/* light/dark mode toggle */
 .theme-toggle {
     background: none;
     border: none;
@@ -152,6 +166,20 @@ ul li:first-child a mark:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    color: var(--nav-link);
+    font-size: 0.85rem;
+}
+.theme-toggle i {
+    color: var(--nav-link);
+    font-size: 0.92rem;
+    transition: color 0.5s ease;
+}
+.theme-toggle:hover {
+    font-size: 0.92rem;
+}
+.theme-toggle:hover i {
+    color: var(--nav-link-hover);
+    font-size: 0.92rem;
 }
 .theme-toggle:focus-visible {
     outline: 2px solid var(--accent);
@@ -267,11 +295,15 @@ html[data-theme="light"] .theme-toggle .fa-moon {
         padding: 0.9rem 0.5rem;
     }
     ul li a, .theme-toggle {
-        padding: 0.75rem 0.85rem;
+        padding: 0.75rem 0.55rem;
         font-size: 0.95rem;
     }
     ul li a:hover, .theme-toggle:hover {
         font-size: 1rem;
+    }
+    ul li:not(:first-child) a,
+    ul li:not(:first-child) a:hover {
+        font-size: 0.9rem;
     }
     ul li:first-child a, ul li:first-child a mark {
         font-size: 1rem;
@@ -287,7 +319,11 @@ html[data-theme="light"] .theme-toggle .fa-moon {
         padding: 0.7rem 0.35rem;
     }
     ul li a, .theme-toggle {
-        padding: 0.5rem 0.45rem;
+        padding: 0.5rem 0.35rem;
+        font-size: 0.85rem;
+    }
+    ul li:not(:first-child) a,
+    ul li:not(:first-child) a:hover {
         font-size: 0.85rem;
     }
     ul li:first-child a, ul li:first-child a mark {
